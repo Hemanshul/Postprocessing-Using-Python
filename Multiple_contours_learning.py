@@ -30,7 +30,6 @@ minorLocator1 = MultipleLocator(0.2)
 
 folder_path = 'https://github.com/Hemanshul/Postprocessing-Using-Python/edit/main/'
 
-# folder_path = 'D:/Desktop/Python/273/1C'
 
 result = 'post'
 # start = 30000
