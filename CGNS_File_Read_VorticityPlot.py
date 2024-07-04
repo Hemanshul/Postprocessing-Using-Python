@@ -28,7 +28,7 @@ majorFormatter1 = FormatStrFormatter('%d')
 minorLocator1 = MultipleLocator(0.4)
 
 
-folder_path = 'C:\\Users\\heman\\OneDrive - Aarhus universitet\\Desktop\\Python\\PythonScripts_IITG_Anupravaha'
+folder_path = 'https://github.com/Hemanshul/Postprocessing-Using-Python/edit/main/'
 
 result = 'post'
 
