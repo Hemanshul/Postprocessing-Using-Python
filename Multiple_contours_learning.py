@@ -30,11 +30,7 @@ minorLocator1 = MultipleLocator(0.2)
 
 folder_path = 'https://github.com/Hemanshul/Postprocessing-Using-Python/edit/main/'
 
-
 result = 'post'
-# start = 30000
-# step = 200
-# plot_marker = 1
 
 def figsize_mm(figSWmm=65, figAR=0.618, nRows=1, nCols=1):
     figW = nCols * figSWmm / 25.4
@@ -77,7 +73,7 @@ for i in range(0,rowNum):
        plt.cla()
       
    
-filename = os.path.join(folder_path,'0000001000.za')
+filename = os.path.join(folder_path,'MultipleContour1.dat')
 
   
 data1 = np.loadtxt(filename,skiprows = 6)
@@ -188,7 +184,7 @@ axs[0,0].text(0.8, 1.25, 'Variable1',
         color='black', fontsize=fonts)
 
 
-filename = os.path.join(folder_path,'0000053000.za')
+filename = os.path.join(folder_path,'MultipleContour2.dat')
     
 data1 = np.loadtxt(filename,skiprows = 6)
 
@@ -268,7 +264,7 @@ axs[2,0].text(-0.05, 1, '(c)',
 
 
 
-filename = os.path.join(folder_path,'0000106635.za')  #283 3C
+filename = os.path.join(folder_path,'MultipleContour3.dat')  
     
 data1 = np.loadtxt(filename,skiprows = 6)
 
@@ -301,7 +297,6 @@ cbar_ax = fig.add_axes([0.06, 0.305, 0.16, 0.01])
 fig.colorbar(ax0, cax = cbar_ax,ticks=[Zmin, 0.5*(Zmin+Zmax), Zmax],format=ticker.FuncFormatter(myfmt), orientation='horizontal', label='')
 
 
-
 ax1 = axs[2,1].contourf(X,Y,Z1,21,cmap=plt.cm.PuBuGn)
 
 Zmin = min(data1[:,8])
@@ -321,7 +316,6 @@ cbar_ax = fig.add_axes([0.54, 0.305, 0.17, 0.01])
 fig.colorbar(ax2, cax = cbar_ax,ticks=[Zmin, 0.5*(Zmin+Zmax), Zmax],format=ticker.FuncFormatter(myfmt),orientation='horizontal', label='')
 
 
-
 ax3 = axs[2,3].contourf(X,Y,Z3,21,cmap=plt.cm.OrRd)
 
 Zmin = min(data1[:,17])
@@ -331,21 +325,15 @@ cbar_ax = fig.add_axes([0.785, 0.305, 0.18, 0.01])
 fig.colorbar(ax3, cax = cbar_ax,ticks=[Zmin, 0.5*(Zmin+Zmax), Zmax],format=ticker.FuncFormatter(myfmt1),  orientation='horizontal', label='')
 
 
-
-
 for i in range(0,rowNum):
    for j in range(colNum):
        axs[i,j].tick_params(which='both',left=0, top=0, right=0,
                     bottom=0, labelleft=0, labeltop=0,
                   labelright=0, labelbottom=0, width=0.5, direction="in") 
 
-
-
-    
-
-    
+  
 directory = os.path.join(folder_path,result)
-figName = (directory+'Multiple_contours'+'.png')
+figName = ('Multiple_contours'+'.png')
     
     
 if not os.path.exists(directory):
