@@ -27,7 +27,7 @@ majorLocator1 = MultipleLocator(2)
 majorFormatter1 = FormatStrFormatter('%d')
 minorLocator1 = MultipleLocator(0.4)
 
-
+#change the path of the folder where you keep the data file
 folder_path = 'https://github.com/Hemanshul/Postprocessing-Using-Python/edit/main/'
 
 result = 'post'
@@ -72,7 +72,7 @@ for i in range(0,rowNum):
        plt.sca(axs[i,j])
        plt.cla()
 
-file =os.path.join(folder_path,'Output.dat') 
+file =os.path.join(folder_path,'Velocity_Streamlines.dat') 
  
 with open(file, 'r') as f:
        data = np.loadtxt(f)  
@@ -127,7 +127,7 @@ Q.set_clim(vmin=c.min(), vmax=c.max());
 
     
 directory = os.path.join(folder_path,result)
-figName = ('Vorticity_Velocity_Streamlines.png')
+figName = ('Velocity_Streamlines.png')
     
     
 if not os.path.exists(directory):
